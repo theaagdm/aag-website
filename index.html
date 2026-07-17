@@ -215,6 +215,18 @@ nav{
 .video-frame.wide{aspect-ratio:16/9}
 .video-frame.tall{aspect-ratio:9/16}
 .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt-facade{cursor:pointer}
+.yt-facade img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.yt-facade:hover img{transform:scale(1.04)}
+.play-btn{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:58px;height:58px;border-radius:50%;background:var(--cobalt);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 24px rgba(5,71,159,.4);transition:transform .2s ease, background .2s ease;
+}
+.play-btn svg{margin-left:3px}
+.yt-facade:hover .play-btn{transform:translate(-50%,-50%) scale(1.1);background:var(--cobalt-dark)}
+.yt-facade:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px}
 @media(max-width:860px){
   .video-grid{grid-template-columns:1fr}
   .shorts-grid{grid-template-columns:1fr 1fr}
@@ -490,31 +502,39 @@ footer{padding:34px 0;border-top:1px solid var(--line)}
       <p>A sample of content we've shot, edited, and produced, from full video ads to short-form built for Reels, TikTok, and Shorts.</p>
     </div>
     <div class="video-grid">
-      <div class="video-frame wide reveal">
-        <iframe src="https://www.youtube-nocookie.com/embed/zf_4spsYDyI" title="AAG Digital Marketing work sample" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-frame wide reveal yt-facade" data-vid="zf_4spsYDyI" role="button" tabindex="0" aria-label="Play video">
+        <img src="https://i.ytimg.com/vi/zf_4spsYDyI/hqdefault.jpg" alt="AAG video work sample" loading="lazy">
+        <span class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
       </div>
-      <div class="video-frame wide reveal">
-        <iframe src="https://www.youtube-nocookie.com/embed/F79oYMG5Nrs" title="AAG Digital Marketing work sample" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-frame wide reveal yt-facade" data-vid="F79oYMG5Nrs" role="button" tabindex="0" aria-label="Play video">
+        <img src="https://i.ytimg.com/vi/F79oYMG5Nrs/hqdefault.jpg" alt="AAG video work sample" loading="lazy">
+        <span class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
       </div>
-      <div class="video-frame wide reveal">
-        <iframe src="https://www.youtube-nocookie.com/embed/Nfma86Ox_Ng" title="AAG Digital Marketing work sample" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-frame wide reveal yt-facade" data-vid="Nfma86Ox_Ng" role="button" tabindex="0" aria-label="Play video">
+        <img src="https://i.ytimg.com/vi/Nfma86Ox_Ng/hqdefault.jpg" alt="AAG video work sample" loading="lazy">
+        <span class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
       </div>
-      <div class="video-frame wide reveal">
-        <iframe src="https://www.youtube-nocookie.com/embed/f7cP0f2_gd8" title="AAG Digital Marketing work sample" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-frame wide reveal yt-facade" data-vid="f7cP0f2_gd8" role="button" tabindex="0" aria-label="Play video">
+        <img src="https://i.ytimg.com/vi/f7cP0f2_gd8/hqdefault.jpg" alt="AAG video work sample" loading="lazy">
+        <span class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
       </div>
     </div>
     <div class="shorts-grid">
-      <div class="video-frame tall reveal">
-        <iframe src="https://www.youtube-nocookie.com/embed/hIGCuvxHY8Q" title="AAG Digital Marketing work sample" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-frame tall reveal yt-facade" data-vid="hIGCuvxHY8Q" role="button" tabindex="0" aria-label="Play video">
+        <img src="https://i.ytimg.com/vi/hIGCuvxHY8Q/hqdefault.jpg" alt="AAG video work sample" loading="lazy">
+        <span class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
       </div>
-      <div class="video-frame tall reveal">
-        <iframe src="https://www.youtube-nocookie.com/embed/Z2CN-ThKciI" title="AAG Digital Marketing work sample" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-frame tall reveal yt-facade" data-vid="Z2CN-ThKciI" role="button" tabindex="0" aria-label="Play video">
+        <img src="https://i.ytimg.com/vi/Z2CN-ThKciI/hqdefault.jpg" alt="AAG video work sample" loading="lazy">
+        <span class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
       </div>
-      <div class="video-frame tall reveal">
-        <iframe src="https://www.youtube-nocookie.com/embed/ziFIjNJw70w" title="AAG Digital Marketing work sample" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-frame tall reveal yt-facade" data-vid="ziFIjNJw70w" role="button" tabindex="0" aria-label="Play video">
+        <img src="https://i.ytimg.com/vi/ziFIjNJw70w/hqdefault.jpg" alt="AAG video work sample" loading="lazy">
+        <span class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
       </div>
-      <div class="video-frame tall reveal">
-        <iframe src="https://www.youtube-nocookie.com/embed/DFU0E9I7r6w" title="AAG Digital Marketing work sample" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-frame tall reveal yt-facade" data-vid="DFU0E9I7r6w" role="button" tabindex="0" aria-label="Play video">
+        <img src="https://i.ytimg.com/vi/DFU0E9I7r6w/hqdefault.jpg" alt="AAG video work sample" loading="lazy">
+        <span class="play-btn" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
       </div>
     </div>
   </div>
@@ -683,6 +703,15 @@ const io = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
 },{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.yt-facade').forEach(f=>{
+  const play=()=>{
+    const v=f.dataset.vid;
+    f.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+v+'?autoplay=1&rel=0" title="AAG video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>';
+    f.classList.remove('yt-facade');f.style.cursor='default';
+  };
+  f.addEventListener('click',play);
+  f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();play();}});
+});
 const g=document.querySelector('.growth');
 if(g){new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){g.classList.add('play');o.disconnect();}},{threshold:.4}).observe(g);}
 if(new URLSearchParams(location.search).get('sent')==='1'){
