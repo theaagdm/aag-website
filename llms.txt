@@ -24,8 +24,7 @@ Clients work directly with the owner on every project. Month-to-month terms, no 
 
 ## Pricing
 
-- Full-service retainers (content, social media, and ads) start at $3,500 per month
-- Content-only, social-only, and ads-only plans cost less
+- Every plan is scoped to the client's business; a fixed monthly price is quoted after a free audit
 - Ad spend is separate and billed by Google or Meta to the client's own account
 - Month to month, no long-term contracts; every engagement starts with a free audit and a fixed monthly price
 
