@@ -157,6 +157,28 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-fi
 .related .eyebrow{color:var(--sky);margin:0;width:100%}
 .related a{color:#fff;font-weight:600;font-size:.92rem;opacity:.85}
 .related a:hover{opacity:1;text-decoration:underline}
+/* guide */
+.g-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.g-item{display:flex;gap:18px;border:1px solid var(--line);border-radius:var(--radius);padding:24px 24px}
+.g-n{font-family:'IBM Plex Mono',monospace;color:var(--navy);font-size:.85rem;padding-top:3px}
+.g-item h3{font-size:1.06rem;margin-bottom:8px}
+.g-item p{color:var(--slate);font-size:.96rem}
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:28px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.fit-col{padding:22px 24px}
+.fit-col:first-child{background:var(--mist)}
+.fit-col p{color:var(--ink);font-size:.97rem}
+.fit-col:last-child .eyebrow{color:var(--grey)}
+.fit-col:last-child p{color:var(--slate)}
+/* who */
+.who-grid{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start;max-width:900px}
+.who-photo{width:200px;height:200px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:3.2rem;letter-spacing:-0.02em}
+.who h2{font-size:clamp(1.6rem,3vw,2.1rem)}
+.who-role{color:var(--grey);font-weight:600;margin:4px 0 16px}
+.who p{color:var(--slate);margin-bottom:12px}
+.creds{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.creds li{background:var(--mist);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;color:var(--navy)}
+.work-top{padding-bottom:64px}
+.work-top .video-grid{margin-bottom:22px}
 /* footer */
 footer{padding:56px 0 24px;border-top:1px solid var(--line)}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
@@ -173,7 +195,9 @@ footer a:hover{color:var(--navy)}
   .hero-grid{gap:32px}
   .obj-grid,.steps,.result-grid,.faq-list,.video-grid{grid-template-columns:1fr}
   .shorts-grid{grid-template-columns:1fr 1fr}
-  .svc-grid{grid-template-columns:1fr}
+  .svc-grid,.g-list,.fit{grid-template-columns:1fr}
+  .who-grid{grid-template-columns:1fr;gap:24px}
+  .who-photo{width:120px;height:120px;font-size:2rem}
   .stat-grid{grid-template-columns:1fr 1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
   .foot-grid > div:first-child{grid-column:span 2}
@@ -210,7 +234,7 @@ footer a:hover{color:var(--navy)}
     <div class="hero-copy">
       <ol class="crumbs"><li><a href="/">Home</a></li><li>Digital marketing, Bergen County</li></ol>
       <span class="eyebrow">Digital marketing agency · Bergen County, NJ</span>
-      <h1>Bergen County digital marketing that turns <em>attention into leads.</em></h1>
+      <h1>Bergen County digital marketing, <em>from the camera to the ad.</em></h1>
       <p class="sub">AAG is a Mahwah-based agency. We shoot your content, post it, run the Google and Meta ads behind it, and report on calls and form fills, not likes. One team, accountable for all of it.</p>
       <ul class="hero-points">
         <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Free audit with a fixed monthly price</li>
@@ -252,14 +276,16 @@ footer a:hover{color:var(--navy)}
   </div>
 </header>
 
+
 <section class="stats" aria-label="Results">
   <div class="wrap stat-grid"><div class="stat"><b>100M+</b><span>Content views generated</span></div><div class="stat"><b>16K → 150K</b><span>Followers in six months</span></div><div class="stat"><b>688 → 1,500</b><span>Annual leads, one year</span></div><div class="stat"><b>Since 2021</b><span>Serving North Jersey businesses</span></div></div>
 </section>
 
-<section class="objections">
+<section class="guide">
   <div class="wrap">
-    <div class="sec-head"><span class="eyebrow">Straight answers</span><h2>The three questions every owner asks first.</h2></div>
-    <div class="obj-grid"><div class="obj"><span class="obj-n">01</span><h3>What does it cost?</h3><p>It depends on what you need handled. Every plan is scoped to your business, and you get a fixed monthly price after the free audit, before anything starts.</p></div><div class="obj"><span class="obj-n">02</span><h3>How long do I have to commit?</h3><p>It&#x27;s flexible. Every business is different, so we agree on terms that fit your goals and how you like to work.</p></div><div class="obj"><span class="obj-n">03</span><h3>Do we have to make the content?</h3><p>No. We plan it, film it with professional camera and drone gear, edit it, and write the captions. You give us a content day every so often and final approval.</p></div></div>
+    <div class="sec-head"><span class="eyebrow">Free advice</span><h2>Where to start, depending on where you are</h2><p>Most local businesses don&#x27;t need everything at once. Find the line that sounds like you and start there, with or without us.</p></div>
+    <ol class="g-list"><li class="g-item"><span class="g-n">01</span><div><h3>Nobody can find you on Google</h3><p>Start with your Google Business Profile. Pick the right category, fill in every field, add a dozen recent photos, and ask every happy customer for a review. It&#x27;s free and often the fastest win for a local business.</p></div></li><li class="g-item"><span class="g-n">02</span><div><h3>People find you but don&#x27;t call</h3><p>Open your website on your phone. Your number should be tappable at the top, the page should load in a few seconds, and there should be one obvious next step.</p></div></li><li class="g-item"><span class="g-n">03</span><div><h3>You post, but nothing happens</h3><p>Post less, but better. Two strong videos a week on one platform beat daily posts everywhere. Show real work and real people, not stock photos and quotes.</p></div></li><li class="g-item"><span class="g-n">04</span><div><h3>You need leads this month</h3><p>Run Google Search ads for your main service in the towns you serve, and send them to a page about that service, not your homepage. Track calls and forms from day one.</p></div></li><li class="g-item"><span class="g-n">05</span><div><h3>You&#x27;re doing all of it and it&#x27;s too much</h3><p>That&#x27;s where an agency earns its fee: one team handling content, posting, and ads, so you can run the business.</p></div></li></ol>
+    <div class="fit"><div class="fit-col"><span class="eyebrow">A good fit</span><p>Established local businesses that want one team handling content, social, and ads, and want to give it a few months to show results.</p></div><div class="fit-col"><span class="eyebrow">Maybe not yet</span><p>You&#x27;re brand new, or you mainly need your Google profile fixed. We&#x27;ll tell you that in the audit, and point you to the free fixes.</p></div></div>
   </div>
 </section>
 
@@ -277,6 +303,8 @@ footer a:hover{color:var(--navy)}
     
   </div>
 </section>
+
+<section class="who"><div class="wrap who-grid"><div class="who-photo" aria-hidden="true">AA</div><div><span class="eyebrow">Who you'll work with</span><h2>Andre Algharbi</h2><p class="who-role">Founder, AAG Digital Marketing</p><p>AAG is a small agency on purpose. You work with Andre directly, from the first call to the monthly report, with no account managers in between.</p><p>Andre has run the full marketing program for a New Jersey real estate lender (Google Ads, SEO, email, and the website, with a small team) and has marketed a physical therapy practice and a cardiology practice. He plans, shoots, and edits the video himself.</p><ul class="creds"><li>MBA, William Paterson University</li><li>B.A. in Communication, media production focus</li><li>Serving North Jersey businesses since 2021</li></ul></div></div></section>
 
 <section class="process">
   <div class="wrap">
