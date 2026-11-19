@@ -64,8 +64,9 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-fi
 .form-lede{font-size:.92rem;color:var(--slate);margin:4px 0 6px}
 .form-card label{display:block;font-weight:700;font-size:.88rem;margin:14px 0 6px}
 .form-card label small{font-weight:500;color:var(--grey)}
-.form-card input,.form-card select{width:100%;padding:12px 13px;border:1.5px solid var(--line);border-radius:9px;font-family:'Manrope',sans-serif;font-size:1rem;color:var(--ink);background:#fff}
-.form-card input:focus,.form-card select:focus{outline:none;border-color:var(--navy)}
+.form-card input,.form-card select,.form-card textarea{width:100%;padding:12px 13px;border:1.5px solid var(--line);border-radius:9px;font-family:'Manrope',sans-serif;font-size:1rem;color:var(--ink);background:#fff}
+.form-card input:focus,.form-card select:focus,.form-card textarea:focus{outline:none;border-color:var(--navy)}
+.form-card textarea{resize:vertical;min-height:84px}
 .form-card .invalid{border-color:#b42318}
 .form-card .btn{width:100%;margin-top:20px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
@@ -230,12 +231,16 @@ footer a:hover{color:var(--navy)}
     <p class="form-lede">We'll review your marketing and send back specific recommendations.</p>
     <label for="f-name">Name</label>
     <input id="f-name" type="text" name="name" required autocomplete="name">
+    <label for="f-biz">Business name</label>
+    <input id="f-biz" type="text" name="business" required autocomplete="organization">
     <label for="f-email">Email</label>
     <input id="f-email" type="email" name="email" required autocomplete="email">
     <label for="f-phone">Phone <small>(optional)</small></label>
     <input id="f-phone" type="tel" name="phone" autocomplete="tel">
     <label for="f-service">What do you need help with?</label>
     <select id="f-service" name="service" required><option value="" disabled>Select one</option><option>Social media management</option><option>Content &amp; video production</option><option selected>Paid ads &amp; lead generation</option><option>All of the above</option><option>Not sure yet</option></select>
+    <label for="f-notes">Notes <small>(optional)</small></label>
+    <textarea id="f-notes" name="notes" rows="3" placeholder="Anything we should know about your business or goals"></textarea>
     <button class="btn btn-primary" type="submit">Request my free audit</button>
     <p class="form-note">Free, no obligation. We reply within one business day.</p>
   </form>
