@@ -369,13 +369,17 @@ document.querySelectorAll('[data-track="call"]').forEach(a=>a.addEventListener('
     const lead={page:location.pathname, service:form.service.value, transport_type:'beacon'};
     if(!window.fetch||!window.FormData){ track('generate_lead',lead); return; }
     e.preventDefault();
+    track('generate_lead',lead);
     const btn=form.querySelector('[type=submit]'), label=btn.textContent;
     btn.disabled=true; btn.textContent='Sending...';
+    const slow=setTimeout(()=>{ btn.textContent='Still sending, one moment...'; },6000);
+    const ctrl=window.AbortController?new AbortController():null;
+    const limit=setTimeout(()=>{ if(ctrl) ctrl.abort(); },45000);
     const data=new FormData(form); data.delete('_next');
-    fetch(form.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{Accept:'application/json'},body:data})
+    fetch(form.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{Accept:'application/json'},body:data,signal:ctrl?ctrl.signal:undefined})
       .then(r=>r.json().then(j=>{ if(!r.ok||String(j.success)!=='true') throw new Error('send failed'); }))
-      .then(()=>{ track('generate_lead',lead); done(); })
-      .catch(()=>{ btn.disabled=false; btn.textContent=label; track('generate_lead',lead); form.submit(); });
+      .then(()=>{ clearTimeout(slow); clearTimeout(limit); done(); })
+      .catch(()=>{ clearTimeout(slow); clearTimeout(limit); btn.disabled=false; btn.textContent=label; form.submit(); });
   });
   if(new URLSearchParams(location.search).get('sent')==='1') done();
 })();
