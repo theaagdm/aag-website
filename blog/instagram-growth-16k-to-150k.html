@@ -46,8 +46,6 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-f
 .nav-cta{background:var(--cobalt);color:#fff !important;padding:9px 16px;border-radius:8px;font-weight:700}
 @media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
 .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cobalt);display:block;margin-bottom:12px}
-footer{padding:30px 0;border-top:1px solid var(--line);margin-top:80px}
-.foot{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:var(--slate);font-size:.85rem}
 .cta-box{background:var(--ink);border-radius:var(--radius);padding:36px 32px;color:#fff;margin:56px 0 0}
 .cta-box h2{font-size:1.5rem;margin-bottom:10px}
 .cta-box p{color:#9aa7bd;margin-bottom:22px}
@@ -65,6 +63,21 @@ article li{margin-bottom:8px}
 .stat-strip{display:flex;gap:28px;flex-wrap:wrap;background:var(--cloud);border-radius:var(--radius);padding:24px 28px;margin:8px 0 36px}
 .stat-strip div b{font-family:'Sora',sans-serif;font-size:1.5rem;font-weight:800;color:var(--cobalt);display:block}
 .stat-strip div span{font-size:.82rem;color:var(--slate)}
+
+footer.site-foot{padding:56px 0 24px;border-top:1px solid #e1e6ef;background:#fff;margin-top:80px}
+.site-foot .sf-wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.site-foot .sf-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.site-foot .sf-logo{height:56px;width:auto;margin-bottom:14px;display:block}
+.site-foot p{color:#4d5668;font-size:.92rem;margin:0 0 12px;line-height:1.6}
+.site-foot a{color:#4d5668;font-size:.92rem;text-decoration:none}
+.site-foot a:hover{color:#0A2F6B}
+.site-foot .sf-grid > div:not(:first-child) a{display:block;padding:4px 0}
+.site-foot .sf-h{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:#737373}
+.site-foot .sf-base{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:36px;padding-top:20px;border-top:1px solid #e1e6ef;font-size:.85rem;color:#737373}
+.site-foot .sf-base a{font-size:.85rem;color:#737373}
+@media(max-width:760px){.site-foot .sf-grid{grid-template-columns:1fr 1fr}.site-foot .sf-grid > div:first-child{grid-column:span 2}}
+article p a,article li a{color:#0A2F6B;font-weight:600;text-decoration:underline;text-decoration-color:#7FA8E8;text-decoration-thickness:2px;text-underline-offset:3px}
+article p a:hover,article li a:hover{text-decoration-color:#0A2F6B}
 </style>
 </head>
 <body>
@@ -104,7 +117,7 @@ article li{margin-bottom:8px}
     <h2>The three decisions that drove the growth</h2>
 
     <h3>1. We posted 4 to 6 times a week, and stopped chasing perfect</h3>
-    <p>The single biggest change was volume. Four to six posts a week, every week, for six months. Short-form video, made for the platform.</p>
+    <p>The single biggest change was volume. Four to six posts a week, every week, for six months. <a href="/video-production-nj">Short-form video</a>, made for the platform.</p>
     <p>Posting at that volume does two things. It gives the algorithm more chances to find a winner, because even a good team cannot predict which video will take off. And it compounds learning: after a month you have twenty data points about what your audience responds to. After three months, the guesswork is mostly gone.</p>
     <p>The trade-off is that you cannot polish every post like a commercial. We stopped trying. A video that is 80 percent polished and posted today beats a perfect one posted next week, every time.</p>
 
@@ -131,7 +144,7 @@ article li{margin-bottom:8px}
     </ul>
 
     <h2>The part nobody wants to hear</h2>
-    <p>This took a real production commitment: shooting, editing, and publishing 4 to 6 times a week for six months. That is the honest cost of organic growth, and it is why most business accounts stay flat. The businesses that win on social either build that muscle internally or hire it.</p>
+    <p>This took a real production commitment: shooting, editing, and publishing 4 to 6 times a week for six months. That is the honest cost of organic growth, and it is why most business accounts stay flat. The businesses that win on social either build that muscle internally or hire it. That is the work our <a href="/social-media-management-north-jersey">social media management</a> service takes off your plate.</p>
     <p>Either path works. The only path that does not is posting twice a week and hoping.</p>
   </article>
 
@@ -142,12 +155,17 @@ article li{margin-bottom:8px}
     <a class="btn" href="/#contact">Get my free audit</a>
   </div>
 </div>
-<footer>
-  <div class="foot">
-    <span>© 2026 AAG Digital Marketing LLC</span>
-    <span><a href="/" style="text-decoration:underline">aagdm.com</a> · <a href="mailto:andre@aagdm.com">andre@aagdm.com</a></span>
-    <span>Content · Social · Paid Ads · New Jersey</span>
+<footer class="site-foot">
+  <div class="sf-wrap sf-grid">
+    <div>
+      <img src="/logo.svg" alt="AAG Digital Marketing" width="466" height="179" class="sf-logo" loading="lazy">
+      <p>Content, social media, and paid ads for North Jersey and New York City businesses. Based in Mahwah, NJ.</p>
+      <p><a href="tel:+12015034737" data-track="call">(201) 503-4737</a><br><a href="mailto:andre@aagdm.com">andre@aagdm.com</a></p>
+    </div>
+    <div><p class="sf-h">Services</p><a href="/digital-marketing-agency-north-jersey">Digital marketing, North Jersey &amp; NYC</a><a href="/social-media-management-north-jersey">Social media management</a><a href="/video-production-nj">Video production</a><a href="/google-meta-ads-north-jersey">Google &amp; Meta ads</a></div>
+    <div><p class="sf-h">Industries</p><a href="/dental-marketing-nj">Dental marketing</a><a href="/contractor-marketing-nj">Contractor marketing</a><a href="/restaurant-marketing-nj">Restaurant marketing</a><a href="/real-estate-photography-video-nj">Real estate photo &amp; video</a><a href="/blog/">Blog</a></div>
   </div>
+  <div class="sf-wrap sf-base"><span>© 2026 AAG Digital Marketing LLC</span><a href="https://www.instagram.com/aagdigitalmarketing/" target="_blank" rel="noopener">@aagdigitalmarketing</a></div>
 </footer>
 <script>(function(){function t(n,p){try{if(typeof gtag==='function')gtag('event',n,p||{});}catch(e){}}
 document.querySelectorAll('a[href^="tel:"]').forEach(function(a){a.addEventListener('click',function(){t('call_click',{page:location.pathname});});});

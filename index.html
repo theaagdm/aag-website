@@ -303,15 +303,23 @@ a.ind{display:block}
 .cta small{display:block;margin-top:22px;font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:#6d7a92}
 
 /* ---------- Footer ---------- */
-footer{padding:34px 0;border-top:1px solid var(--line)}
-.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:var(--slate);font-size:.88rem}
-.foot-links{display:flex;gap:22px;align-items:center}
-.foot-links a{color:var(--slate);font-weight:600}
-.foot-links a:hover{color:var(--cobalt)}
 
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+footer.site-foot{padding:56px 0 24px;border-top:1px solid #e1e6ef;background:#fff}
+.site-foot .sf-wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.site-foot .sf-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.site-foot .sf-logo{height:56px;width:auto;margin-bottom:14px;display:block}
+.site-foot p{color:#4d5668;font-size:.92rem;margin:0 0 12px;line-height:1.6}
+.site-foot a{color:#4d5668;font-size:.92rem;text-decoration:none}
+.site-foot a:hover{color:#0A2F6B}
+.site-foot .sf-grid > div:not(:first-child) a{display:block;padding:4px 0}
+.site-foot .sf-h{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:#737373}
+.site-foot .sf-base{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:36px;padding-top:20px;border-top:1px solid #e1e6ef;font-size:.85rem;color:#737373}
+.site-foot .sf-base a{font-size:.85rem;color:#737373}
+@media(max-width:760px){.site-foot .sf-grid{grid-template-columns:1fr 1fr}.site-foot .sf-grid > div:first-child{grid-column:span 2}}
 </style>
 </head>
 <body>
@@ -688,17 +696,17 @@ footer{padding:34px 0;border-top:1px solid var(--line)}
   </div>
 </section>
 
-<footer>
-  <div class="wrap foot">
-    <span>© 2026 AAG Digital Marketing LLC</span>
-    <span class="foot-links">
-      <a href="https://www.instagram.com/aagdigitalmarketing/" target="_blank" rel="noopener" aria-label="AAG on Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-3px;margin-right:6px"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@aagdigitalmarketing
-      </a>
-      <a href="mailto:andre@aagdm.com">andre@aagdm.com</a>
-    </span>
-    <span class="foot-links"><a href="/digital-marketing-agency-north-jersey">Services</a><a href="/dental-marketing-nj">Dental</a><a href="/contractor-marketing-nj">Contractors</a><a href="/restaurant-marketing-nj">Restaurants</a><a href="/real-estate-photography-video-nj">Real Estate</a></span>
+<footer class="site-foot">
+  <div class="sf-wrap sf-grid">
+    <div>
+      <img src="/logo.svg" alt="AAG Digital Marketing" width="466" height="179" class="sf-logo" loading="lazy">
+      <p>Content, social media, and paid ads for North Jersey and New York City businesses. Based in Mahwah, NJ.</p>
+      <p><a href="tel:+12015034737" data-track="call">(201) 503-4737</a><br><a href="mailto:andre@aagdm.com">andre@aagdm.com</a></p>
+    </div>
+    <div><p class="sf-h">Services</p><a href="/digital-marketing-agency-north-jersey">Digital marketing, North Jersey &amp; NYC</a><a href="/social-media-management-north-jersey">Social media management</a><a href="/video-production-nj">Video production</a><a href="/google-meta-ads-north-jersey">Google &amp; Meta ads</a></div>
+    <div><p class="sf-h">Industries</p><a href="/dental-marketing-nj">Dental marketing</a><a href="/contractor-marketing-nj">Contractor marketing</a><a href="/restaurant-marketing-nj">Restaurant marketing</a><a href="/real-estate-photography-video-nj">Real estate photo &amp; video</a><a href="/blog/">Blog</a></div>
   </div>
+  <div class="sf-wrap sf-base"><span>© 2026 AAG Digital Marketing LLC</span><a href="https://www.instagram.com/aagdigitalmarketing/" target="_blank" rel="noopener">@aagdigitalmarketing</a></div>
 </footer>
 
 <script>
