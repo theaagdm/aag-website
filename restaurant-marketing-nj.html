@@ -370,15 +370,25 @@ function track(name, params){
 document.querySelectorAll('[data-track="call"]').forEach(a=>a.addEventListener('click',()=>track('call_click',{page:location.pathname})));
 (function(){
   const form=document.getElementById('audit-form'); if(!form) return;
+  const ok=document.getElementById('form-success');
+  const done=()=>{ form.style.display='none'; ok.style.display='block'; ok.setAttribute('tabindex','-1'); try{ok.focus({preventScroll:true});}catch(e){} };
   let started=false;
   form.addEventListener('focusin',()=>{ if(!started){ started=true; track('form_start',{page:location.pathname}); } });
+  // Sends in the background so visitors stay on the page and the lead event always has time to fire.
   form.addEventListener('submit',e=>{
     if(form._honey.value){ e.preventDefault(); return; }
-    track('generate_lead',{page:location.pathname, service:form.service.value});
+    const lead={page:location.pathname, service:form.service.value, transport_type:'beacon'};
+    if(!window.fetch||!window.FormData){ track('generate_lead',lead); return; }
+    e.preventDefault();
+    const btn=form.querySelector('[type=submit]'), label=btn.textContent;
+    btn.disabled=true; btn.textContent='Sending...';
+    const data=new FormData(form); data.delete('_next');
+    fetch(form.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{Accept:'application/json'},body:data})
+      .then(r=>r.json().then(j=>{ if(!r.ok||String(j.success)!=='true') throw new Error('send failed'); }))
+      .then(()=>{ track('generate_lead',lead); done(); })
+      .catch(()=>{ btn.disabled=false; btn.textContent=label; track('generate_lead',lead); form.submit(); });
   });
-  if(new URLSearchParams(location.search).get('sent')==='1'){
-    form.style.display='none'; document.getElementById('form-success').style.display='block';
-  }
+  if(new URLSearchParams(location.search).get('sent')==='1') done();
 })();
 document.querySelectorAll('.yt-facade').forEach(f=>{
   const play=()=>{

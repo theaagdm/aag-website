@@ -724,6 +724,6 @@ if(new URLSearchParams(location.search).get('sent')==='1'){
 </script>
 <script>(function(){function t(n,p){try{if(typeof gtag==='function')gtag('event',n,p||{});}catch(e){}}
 document.querySelectorAll('a[href^="tel:"]').forEach(function(a){a.addEventListener('click',function(){t('call_click',{page:location.pathname});});});
-document.querySelectorAll('form[action*="formsubmit"]').forEach(function(f){f.addEventListener('submit',function(){if(f._honey&&f._honey.value)return;t('generate_lead',{page:location.pathname});});});})();</script>
+document.querySelectorAll('form[action*="formsubmit"]').forEach(function(f){var ok=f.parentNode.querySelector('.form-success');f.addEventListener('submit',function(e){if(f._honey&&f._honey.value){e.preventDefault();return;}var lead={page:location.pathname,transport_type:'beacon'};if(!window.fetch||!window.FormData||!ok){t('generate_lead',lead);return;}e.preventDefault();var b=f.querySelector('[type=submit]'),l=b.textContent;b.disabled=true;b.textContent='Sending...';var d=new FormData(f);d.delete('_next');fetch(f.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{Accept:'application/json'},body:d}).then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=='true')throw new Error('send failed');});}).then(function(){t('generate_lead',lead);f.style.display='none';ok.style.display='block';}).catch(function(){b.disabled=false;b.textContent=l;t('generate_lead',lead);f.submit();});});});})();</script>
 </body>
 </html>
