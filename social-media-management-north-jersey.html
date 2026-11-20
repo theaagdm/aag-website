@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M30WP1CJSB"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-M30WP1CJSB');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Social Media Management in North Jersey &amp; NYC | AAG</title>
 <meta name="description" content="Social media management for North Jersey and NYC businesses. We plan, film, edit, and post on Instagram, Facebook, TikTok, YouTube, and LinkedIn. Free audit.">
@@ -352,11 +354,7 @@ footer a:hover{color:var(--navy)}
 <script>document.documentElement.classList.add('js');
 // Sends events to GA4 once a gtag or GTM snippet is added to the site; does nothing until then.
 function track(name, params){
-  try{
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(Object.assign({event:name}, params||{}));
-    if(typeof window.gtag==='function') window.gtag('event', name, params||{});
-  }catch(e){}
+  try{ if(typeof window.gtag==='function') window.gtag('event', name, params||{}); }catch(e){}
 }
 document.querySelectorAll('[data-track="call"]').forEach(a=>a.addEventListener('click',()=>track('call_click',{page:location.pathname})));
 (function(){
