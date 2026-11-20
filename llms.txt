@@ -24,9 +24,9 @@ Clients work directly with the owner on every project. Flexible terms set with e
 
 ## Pricing
 
-- Every plan is scoped to the client's business; a fixed monthly price is quoted after a free audit
+- Every plan is scoped to the client's business; a custom quote is provided after a free audit
 - Ad spend is separate and billed by Google or Meta to the client's own account
-- Flexible terms set with each client; every engagement starts with a free audit and a fixed monthly price
+- Flexible terms set with each client; every engagement starts with a free audit and a custom quote
 
 ## Key pages
 
