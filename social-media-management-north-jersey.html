@@ -171,14 +171,15 @@ nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-fi
 .fit-col p{color:var(--ink);font-size:.97rem}
 .fit-col:last-child .eyebrow{color:var(--grey)}
 .fit-col:last-child p{color:var(--slate)}
-/* who */
-.who-grid{display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:start;max-width:900px}
-.who-photo{width:200px;height:200px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-weight:800;font-size:3.2rem;letter-spacing:-0.02em}
-.who h2{font-size:clamp(1.6rem,3vw,2.1rem)}
-.who-role{color:var(--grey);font-weight:600;margin:4px 0 16px}
-.who p{color:var(--slate);margin-bottom:12px}
-.creds{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.creds li{background:var(--mist);border-radius:999px;padding:7px 14px;font-size:.88rem;font-weight:600;color:var(--navy)}
+/* about */
+.who-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:56px;align-items:start}
+.who h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:18px;max-width:22ch}
+.who p{color:var(--slate);margin-bottom:14px;max-width:60ch}
+.facts{list-style:none;border:1px solid var(--line);border-radius:var(--radius);padding:8px 24px;background:var(--mist)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--line);font-size:.95rem}
+.facts li:first-child{border-top:0}
+.facts span{color:var(--grey);font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding-top:2px}
+.facts b{text-align:right;color:var(--ink)}
 .work-top{padding-bottom:64px}
 .work-top .video-grid{margin-bottom:22px}
 /* footer */
@@ -198,8 +199,7 @@ footer a:hover{color:var(--navy)}
   .obj-grid,.steps,.result-grid,.faq-list,.video-grid{grid-template-columns:1fr}
   .shorts-grid{grid-template-columns:1fr 1fr}
   .svc-grid,.g-list,.fit{grid-template-columns:1fr}
-  .who-grid{grid-template-columns:1fr;gap:24px}
-  .who-photo{width:120px;height:120px;font-size:2rem}
+  .who-grid{grid-template-columns:1fr;gap:28px}
   .stat-grid{grid-template-columns:1fr 1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
   .foot-grid > div:first-child{grid-column:span 2}
@@ -306,7 +306,7 @@ footer a:hover{color:var(--navy)}
   </div>
 </section>
 
-<section class="who"><div class="wrap who-grid"><div class="who-photo" aria-hidden="true">AA</div><div><span class="eyebrow">Who you'll work with</span><h2>Andre Algharbi</h2><p class="who-role">Founder, AAG Digital Marketing</p><p>AAG is a small agency on purpose. You work with Andre directly, from the first call to the monthly report, with no account managers in between.</p><p>Andre has run the full marketing program for a New Jersey real estate lender (Google Ads, SEO, email, and the website, with a small team) and has marketed a physical therapy practice and a cardiology practice. He plans, shoots, and edits the video himself.</p><ul class="creds"><li>MBA, William Paterson University</li><li>B.A. in Communication, media production focus</li><li>Serving North Jersey businesses since 2021</li></ul></div></div></section>
+<section class="who"><div class="wrap who-grid"><div><span class="eyebrow">About AAG</span><h2>A North Jersey agency that makes the content and runs the marketing.</h2><p>AAG Digital Marketing was founded in 2021 in Mahwah, NJ. We plan, shoot, and edit video in-house, and run the social media, Google, and Meta campaigns behind it, so the content and the ads are built to work together.</p><p>Each project gets the specialists it needs, with one point of contact who knows your business from the first call to the monthly report.</p><p>Our founder, Andre Algharbi, holds an MBA and a degree in media production, and has led the full marketing program for a New Jersey real estate lender as well as marketing for medical practices.</p></div><ul class="facts"><li><span>Founded</span><b>2021</b></li><li><span>Based in</span><b>Mahwah, NJ</b></li><li><span>Serving</span><b>North Jersey &amp; NYC</b></li><li><span>Video</span><b>Shot and edited in-house</b></li><li><span>Team</span><b>Matched to each project</b></li></ul></div></section>
 
 <section class="local">
   <div class="wrap local-grid">
