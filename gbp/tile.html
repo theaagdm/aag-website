@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AAG tile</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap" rel="stylesheet">
+<style>html,body{margin:0;height:100%;background:#EEF2F8;font-family:Inter,Arial,sans-serif}
+.w{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+.s{width:min(100vw,100vh);height:min(100vw,100vh);box-sizing:border-box;padding:7%;display:flex;flex-direction:column;justify-content:space-between}
+.s img{height:10%;align-self:flex-start}.bar{width:9%;height:.8%;background:#7FA8E8;margin-bottom:4%}
+h1{margin:0;font-size:min(8.6vw,8.6vh);font-weight:800;color:#021F4A;line-height:1.05;letter-spacing:-.02em}
+p{margin:3% 0 0;font-size:min(4vw,4vh);color:#0A2F6B;font-weight:500}.f{font-size:min(3.1vw,3.1vh);color:#737373;font-weight:500}</style></head>
+<body><div class="w"><div class="s"><img src="/logo.svg" alt=""><div><div class="bar"></div><h1 id="h"></h1><p id="p"></p></div><div class="f">North Jersey &amp; New York City · aagdm.com</div></div></div>
+<script>const T=[["Digital Marketing","Content, social, and ads from one local team"],["Social Media Management","Content shot on location, posted for you"],["Video Production","Brand, social, and ad video"],["Google &amp; Meta Ads","Ads that turn into calls and customers"],["Dental Marketing","More new patients, built on trust"],["Contractor Marketing","More of the jobs you want"],["Restaurant Marketing","Fill more tables, every night"],["Real Estate Photo &amp; Video","Listings that stand out online"]];
+const n=Math.max(0,Math.min(7,(parseInt(new URLSearchParams(location.search).get('t'))||1)-1));document.getElementById('h').innerHTML=T[n][0];document.getElementById('p').innerHTML=T[n][1];</script></body></html>
